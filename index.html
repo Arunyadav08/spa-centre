@@ -7,37 +7,57 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff}
+body{font-family:'Poppins',sans-serif;background:#0a0a0a;color:#fff;overflow-x:hidden}
 
-nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:20px;background:#000;z-index:1000}
-nav h2{color:#c8a97e}
-nav ul{list-style:none;display:flex;gap:15px}
-nav ul li a{color:#fff;text-decoration:none}
+nav{position:fixed;width:100%;display:flex;justify-content:space-between;padding:20px 40px;background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);z-index:1000}
+nav h2{color:#d4af37;font-weight:600}
+nav ul{display:flex;gap:20px;list-style:none}
+nav ul li a{color:#fff;text-decoration:none;font-size:14px}
 
-/* AUTO SLIDER */
-.slider{height:100vh;position:relative;overflow:hidden}
-.slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:1s}
+/* PREMIUM SLIDER */
+.slider{height:100vh;position:relative}
+.slide{position:absolute;width:100%;height:100%;background-size:cover;background-position:center;opacity:0;transition:1.5s}
 .slide.active{opacity:1}
+.overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6)}
+.slider-content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}
+.slider-content h1{font-size:50px;color:#fff}
+.slider-content p{margin:15px 0;color:#ccc}
 
-section{padding:60px 20px}
+.btn{background:#d4af37;color:#000;padding:12px 25px;border:none;border-radius:30px;cursor:pointer}
 
-.btn{background:#c8a97e;color:#fff;padding:10px 20px;border:none;border-radius:5px}
+section{padding:80px 40px}
 
-.services,.models,.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{background:#1a1a1a;padding:20px;border-radius:10px}
+/* GLASS EFFECT */
+.glass{background:rgba(255,255,255,0.05);backdrop-filter:blur(10px);border-radius:15px;padding:20px}
 
-.model-card img{width:100%;height:250px;object-fit:cover;border-radius:10px}
+.services,.models,.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
 
-.review{background:#1a1a1a;padding:20px;border-radius:10px}
+.card{transition:0.3s}
+.card:hover{transform:translateY(-10px)}
 
-.faq{max-width:800px;margin:auto}
-.faq div{margin-bottom:10px}
+.price{color:#d4af37;margin:10px 0}
 
-iframe{width:100%;height:300px;border:0;border-radius:10px}
+.model-card img{width:100%;height:280px;object-fit:cover;border-radius:15px}
 
-.call-btn{position:fixed;bottom:20px;right:20px;background:#c8a97e;padding:15px;border-radius:50%;text-decoration:none;color:#fff;font-size:20px}
+.review{font-size:14px}
 
-footer{background:#000;text-align:center;padding:20px}
+.faq div{margin-bottom:15px}
+
+iframe{width:100%;height:300px;border-radius:15px;border:none}
+
+.call-btn, .whatsapp-btn{
+position:fixed;
+bottom:20px;
+padding:15px;
+border-radius:50%;
+color:#fff;
+font-size:18px;
+text-decoration:none
+}
+.call-btn{right:20px;background:#d4af37;color:#000}
+.whatsapp-btn{right:80px;background:#25D366}
+
+footer{text-align:center;padding:30px;background:#000;color:#aaa}
 </style>
 </head>
 <body>
@@ -45,69 +65,68 @@ footer{background:#000;text-align:center;padding:20px}
 <nav>
 <h2>24 Night Spa Pune</h2>
 <ul>
-<li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
 <li><a href="#models">Models</a></li>
 <li><a href="#reviews">Reviews</a></li>
-<li><a href="#faq">FAQ</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
-<!-- AUTO SLIDER -->
+<!-- PREMIUM AUTO SLIDER -->
 <div class="slider">
 <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874')"></div>
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1556228720-195a672e8a03')"></div>
 <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600334129128-685c5582fd35')"></div>
+<div class="overlay"></div>
+<div class="slider-content">
+<h1>Luxury Night Spa</h1>
+<p>Experience Premium Relaxation in Pune</p>
+<button class="btn">Book Now</button>
+</div>
 </div>
 
-<section id="about">
-<h2>About Us</h2>
-<p>24 Night Spa Pune offers premium spa services with trained professionals. Enjoy luxury therapy and full relaxation in a peaceful environment. We ensure hygiene, comfort and satisfaction.</p>
-</section>
-
 <section id="services">
-<h2>Services</h2>
+<h2>Our Services</h2>
 <div class="services">
-<div class="card"><h3>Massage</h3><p>₹1500</p></div>
-<div class="card"><h3>Thai</h3><p>₹2000</p></div>
-<div class="card"><h3>Aroma</h3><p>₹3000</p></div>
+<div class="glass card"><h3>Swedish Massage</h3><p class="price">₹1500</p></div>
+<div class="glass card"><h3>Thai Massage</h3><p class="price">₹2000</p></div>
+<div class="glass card"><h3>Aromatherapy</h3><p class="price">₹3000</p></div>
 </div>
 </section>
 
 <section id="models">
 <h2>Our Models</h2>
 <div class="models">
-<div class="model-card"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"><h3>Model 1</h3></div>
-<div class="model-card"><img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe"><h3>Model 2</h3></div>
-<div class="model-card"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"><h3>Model 3</h3></div>
+<div class="model-card glass"><img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"></div>
+<div class="model-card glass"><img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe"></div>
+<div class="model-card glass"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"></div>
 </div>
 </section>
 
 <section id="reviews">
-<h2>Customer Reviews</h2>
+<h2>Client Reviews</h2>
 <div class="reviews">
-<div class="review">⭐️⭐️⭐️⭐️⭐️ Amazing experience!</div>
-<div class="review">⭐️⭐️⭐️⭐️ Best spa in Pune</div>
-<div class="review">⭐️⭐️⭐️⭐️⭐️ Very relaxing service</div>
+<div class="glass review">⭐️⭐️⭐️⭐️⭐️ Best night spa experience!</div>
+<div class="glass review">⭐️⭐️⭐️⭐️ Amazing service & staff</div>
+<div class="glass review">⭐️⭐️⭐️⭐️⭐️ Highly recommended</div>
 </div>
 </section>
 
 <section id="faq">
 <h2>FAQ</h2>
 <div class="faq">
-<div><strong>Is spa open 24 hours?</strong><p>Yes, we are open 24/7.</p></div>
-<div><strong>Do you provide home service?</strong><p>Yes available on request.</p></div>
+<div><strong>Open 24/7?</strong><p>Yes we are open all night.</p></div>
+<div><strong>Location?</strong><p>Pune city center.</p></div>
 </div>
 </section>
 
 <section id="contact">
-<h2>Location</h2>
+<h2>Find Us</h2>
 <iframe src="https://maps.google.com/maps?q=Pune&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-<p>📞 8053309511</p>
 </section>
 
 <a href="tel:8053309511" class="call-btn">📞</a>
+<a href="https://wa.me/918053309511" class="whatsapp-btn">💬</a>
 
 <footer>
 <p>© 2026 24 Night Spa Pune</p>
@@ -120,7 +139,7 @@ setInterval(()=>{
 slides[i].classList.remove('active');
 i=(i+1)%slides.length;
 slides[i].classList.add('active');
-},3000);
+},4000);
 </script>
 
 </body>
