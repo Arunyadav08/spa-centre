@@ -216,6 +216,55 @@ h2 {
     margin-top: 20px;
     font-size: 14px;
 }
+    /* 3 DOT MENU */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* DROPDOWN MENU */
+.menu-content {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: #1a1a1a;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+.menu-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.menu-content a:hover {
+    background: gold;
+    color: black;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+}
 </style>
 </head>
 
@@ -525,6 +574,25 @@ We pride ourselves on offering a wide range of premium services, including deep 
 </section>
 
 <a href="https://wa.me/918053309511" class="whatsapp">💬</a>
+    <!-- 3 DOT BUTTON -->
+<div class="menu-btn" onclick="toggleMenu()">⋮</div>
+
+<!-- MENU ITEMS -->
+<div class="menu-content" id="menu">
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Models</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/918053309511" class="whatsapp-btn">💬</a>
+    <script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
