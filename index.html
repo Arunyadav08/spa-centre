@@ -175,6 +175,47 @@ h2 {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+    .pricing-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.pricing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.pricing-box {
+    width: 300px;
+    background: #111;
+    border-radius: 15px;
+    padding: 25px;
+    border: 2px solid gold;
+    transition: 0.3s;
+}
+
+.pricing-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px gold;
+}
+
+.pricing-box h3 {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.price-list {
+    text-align: left;
+    line-height: 2;
+    font-size: 15px;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 14px;
+}
 </style>
 </head>
 
@@ -207,7 +248,7 @@ We pride ourselves on offering a wide range of premium services, including deep 
 <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03">
 </div>
 
-<h3>Service Charges</h3>
+<h3>Our Service </h3>
 <div class="flex">
 <div class="card">
 <img src="full body.jpg"/> Full Body Massage </div>
@@ -219,9 +260,57 @@ We pride ourselves on offering a wide range of premium services, including deep 
 <div class="card"><img src="oil massage.jpg"/>Hot Stone </div>  
 <div class="card"><img src="oil massage.jpg"/>Swedisd For Relaxation </div>  
 </div>
-
-<p><b>Note:</b> No advance payment required. Visit spa and pay after service.</p>
 </section>
+
+<section class="pricing-section">
+    <h2>Service Charges</h2>
+
+    <div class="pricing-container">
+
+        <!-- Box 1 -->
+        <div class="pricing-box">
+            <h3>High Profile Indian Model</h3>
+            <div class="price-list">
+                1 Hour – ₹12000<br>
+                3 Hours – ₹25000<br>
+                Full Night – ₹38000
+            </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="pricing-box">
+            <h3>High Profile Russian Model</h3>
+            <div class="price-list">
+                1 Hour – ₹13000<br>
+                3 Hours – ₹26000<br>
+                Full Night – ₹40000
+            </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="pricing-box">
+            <h3>Airhostess</h3>
+            <div class="price-list">
+                1 Hour – ₹15000<br>
+                3 Hours – ₹28000<br>
+                Full Night – ₹44000
+            </div>
+        </div>
+
+        <!-- Box 4 -->
+        <div class="pricing-box">
+            <h3>Medium Profile College Girl & Housewife</h3>
+            <div class="price-list">
+                1 Hour – ₹6000<br>
+                2 Hours – ₹12000<br>
+                Full Night – ₹20000
+            </div>
+        </div>
+
+    </div>
+
+    <p class="note"><b>Note:</b> No advance payment required. Visit spa and pay after service.</p>
+</section>    
 
 <section class="why-section">
 
