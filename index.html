@@ -151,6 +151,30 @@ input, textarea {
 h2 {
     margin-bottom: 20px;
 }
+    .model-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.model-track {
+    display: flex;
+    width: 200%;
+    animation: scroll 20s linear infinite;
+}
+
+.model-track img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 </style>
 </head>
 
@@ -257,8 +281,8 @@ We pride ourselves on offering a wide range of premium services, including deep 
     
 <section id="models">
 <h2>Our Models / Therapists</h2>
-<p>Meet our top 10 professional spa therapists who ensure a top-quality spa experience.</p>
-
+<div class="model-slider">
+   <div class="model-track"> 
 <div class="flex">
 <img src="model1.jpeg">
 <img src="model2.jpeg">
@@ -285,7 +309,35 @@ We pride ourselves on offering a wide range of premium services, including deep 
 <img src="model23.jpeg">
 <img src="model24.jpeg">
 <img src="model25.jpeg">
-</div>
+   
+<img src="model1.jpeg">
+<img src="model2.jpeg">
+<img src="model3.jpeg">
+<img src="model4.jpeg">
+<img src="model5.jpeg">
+<img src="model6.jpeg">
+<img src="model7.jpeg">
+<img src="model8.jpeg">
+<img src="model9.jpeg">
+<img src="model10.jpeg">
+<img src="model11.jpeg">
+<img src="model12.jpeg">
+<img src="model13.jpeg">
+<img src="model14.jpeg">
+<img src="model15.jpeg">
+<img src="model16.jpeg">
+<img src="model17.jpeg">
+<img src="model18.jpeg">
+<img src="model19.jpeg">
+<img src="model20.jpeg">
+<img src="model21.jpeg">
+<img src="model22.jpeg">
+<img src="model23.jpeg">
+<img src="model24.jpeg">
+<img src="model25.jpeg">
+    
+   </div>
+</div>       
 </section>
 
 <section>
